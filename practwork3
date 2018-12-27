@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbersIntA = new int[5];
+            numbersIntA[0] =int.Parse(Console.ReadLine());
+            numbersIntA[1] = int.Parse(Console.ReadLine());
+            Random rand = new Random();
+            int[,] numbersIntB = new int[4, 3];
+            int sumAll = numbersIntA.Sum();
+            for (int i = 0; i < numbersIntB.GetUpperBound(0); i++)
+            {
+                for (int j = 0; J < numbersIntB.GetUpperBound(1); J++)
+                {
+                    numbersIntB[i, j]=rand.Next();
+                    sumAll += numbersIntB[i, j];
+                }
+            }
+            const int SIZE_OF_numbersInt1 = 10;
+            const int SIZE_OF_numbersInt2 = 15;
+            int[] numbersInt1 = new int[SIZE_OF_numbersInt1];
+            int[] numbersInt2 = new int[SIZE_OF_numbersInt2];
+            for (int i = 0; i < numbersInt2.Length; i++)
+            {
+                numbersInt2[i] = rand.Next();
+            }
+            for (int i = 0; i < numbersInt1.Length; i++)
+            {
+                numbersInt1[i] = rand.Next();
+            }
+            numbersInt1.Distinct();
+            numbersInt2.Distinct();
+
+        }
+    }
+}
